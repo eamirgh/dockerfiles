@@ -7,7 +7,7 @@ on:
 
 jobs:
   docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu:22.04
     steps:
       -
         name: Set up QEMU
@@ -25,5 +25,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
+          context: ./php/laravel/8.1
           push: true
           tags: eamirgh/laravel9-php8.1:latest
