@@ -25,6 +25,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: ./php/laravel/8.1
+          context: ./php/laravel/8.1/
           push: true
           tags: eamirgh/laravel9-php8.1:latest
